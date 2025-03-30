@@ -110,8 +110,8 @@ function WhiteBoard({ persistenceKey, isRT = false }) {
     <div style={{ position: "fixed", inset: 0 }}>
       <Tldraw
         persistenceKey={persistenceKey || null}
-        onMount={(editor) => loadData(editor, persistenceKey)}
-        store={isRT ? store : null}
+        onMount={(editor) => {console.log('Hi');loadData(editor, persistenceKey)}}
+        // store={isRT ? store : null}
         components={{
           SharePanel: () => <Toolbar persistenceKey={persistenceKey} />,
         }}
